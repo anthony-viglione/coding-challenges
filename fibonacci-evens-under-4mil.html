@@ -18,7 +18,7 @@ if(newVal % 2 === 0){   //checks if new number is even
   evenSum += newVal     //adds new even number to the previous sum of even numbers
 }
 console.log('newVal: ',newVal)
-} while (arr[arr.length-1] < 4000000)   //maintains loop as long as end number on array is less than 4 million
+} while (arr[arr.length-1] + arr[arr.length-2] < 4000000)   //maintains loop as long as new number would be less than 4 million
 console.log({arr})
 console.log({evens})
 console.log({evenSum})
