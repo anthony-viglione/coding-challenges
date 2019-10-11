@@ -1,0 +1,25 @@
+<script>
+let arr = [0]
+let evens = []
+let evenSum = 0
+
+do {
+  if (arr.length == 1 && arr[0] == 0) {
+    console.log('array with just a zero')
+    arr.push(1)
+    console.log(arr)
+    }
+    // array now has just 0 and 1
+
+let newVal = arr[arr.length-1] + arr[arr.length-2]  //this adds the two numbers at the end of the array together, and is in the loop so it repeats.
+arr.push(newVal)        //adds new number to the array of fibbonacci numbers
+if(newVal % 2 === 0){   //checks if new number is even
+  evens.push(newVal)    //adds even number to the array of even numbers.
+  evenSum += newVal     //adds new even number to the previous sum of even numbers
+}
+console.log('newVal: ',newVal)
+} while (arr[arr.length-1] < 4000000)   //maintains loop as long as end number on array is less than 4 million
+console.log({arr})
+console.log({evens})
+console.log({evenSum})
+</script>
