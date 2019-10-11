@@ -1,0 +1,31 @@
+<script>
+console.log('is this thing on?')
+var i = 0;
+console.log(i)
+function myFunction(){
+i++
+document.getElementById("i-value").innerHTML = "times clicked: "+ i;
+console.log(i)
+var inputted = 0
+inputted = document.getElementById("input").value;
+console.log("input datatype is: ",typeof(inputted))
+inputted = parseInt(inputted, 10)
+document.getElementById("new-value").innerHTML = inputted + i;
+}
+</script>
+<html>
+<body style= "background-color: gray">
+    <div style="background-color: blue;
+        color: green">
+        Hello
+        <input id="input" type="number"
+        />
+        <button onclick="myFunction()">Click me</button>
+        <div id="i-value">
+        </div>
+        <div id="new-value">
+
+        </div>
+    </div>
+</body> 
+</html>
