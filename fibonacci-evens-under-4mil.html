@@ -8,18 +8,37 @@ do {
     console.log('array with just a zero')
     arr.push(1)
     console.log(arr)
-    }
+  }
     // array now has just 0 and 1
 
-let newVal = arr[arr.length-1] + arr[arr.length-2]  //this adds the two numbers at the end of the array together, and is in the loop so it repeats.
-arr.push(newVal)        //adds new number to the array of fibbonacci numbers
-if(newVal % 2 === 0){   //checks if new number is even
-  evens.push(newVal)    //adds even number to the array of even numbers.
-  evenSum += newVal     //adds new even number to the previous sum of even numbers
-}
-console.log('newVal: ',newVal)
+  let newVal = arr[arr.length-1] + arr[arr.length-2]  //this adds the two numbers at the end of the array together, and is in the loop so it repeats.
+  arr.push(newVal)        //adds new number to the array of fibbonacci numbers
+  if(newVal % 2 === 0){   //checks if new number is even
+   evens.push(newVal)    //adds even number to the array of even numbers.
+   evenSum += newVal     //adds new even number to the previous sum of even numbers
+  }
+  console.log('newVal: ',newVal)
 } while (arr[arr.length-1] + arr[arr.length-2] < 4000000)   //maintains loop as long as new number would be less than 4 million
+console.log(document.querySelectorAll('*[id]'))
+
 console.log({arr})
+document.getElementById("fibonacci-sequence").innerHTML = "Full sequence: " + arr;
 console.log({evens})
+document.getElementById("even-fibonacci-sequence").innerHTML = "Evens only: " + evens;
 console.log({evenSum})
+document.getElementById("sum-of-evens").innerHTML = "Sum of evens: " + evenSum;
+
 </script>
+<html>
+  <body>
+    <h1>A Fibonacci Challenge</h1>
+    <div>
+      <div id="fibonacci-sequence"></div> 
+      <div id="even-fibonacci-sequence"></div>
+      <div id="sum-of-evens"></div>
+    </div>
+    <div>
+      I was asked to sum all of the even fibonacci numbers that were less than 4 million. 
+    </div>
+  </body>
+</html>
